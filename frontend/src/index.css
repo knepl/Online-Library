@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: "Poppins", "sans-serif";
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+        background-color: #fdfeff;
+        overflow-x: hidden;
+    }
+    div#root {
+        height: 100%;
+    }
+}
+
+@layer components {
+    .input-box {
+        @apply w-full text-sm bg-transparent border-[1.5px] px-5 py-3 rounded mb-4 outline-none;
+    }
+
+    .btn-primary {
+        @apply w-full text-sm bg-primary text-white p-2 rounded my-1 hover:bg-blue-600;
+    }
+    .icon-btn {
+        @apply text-xl text-slate-300 cursor-pointer hover:text-primary;
+    }
+    .input-label {
+        @apply text-xs text-slate-400;
+    }
+    .gallery {
+        margin: 0 auto;
+        display: grid;
+        width: 100%;
+        max-width: 1920px;
+        grid-gap: 50px;
+        grid-template-columns: repeat(auto-fit, 300px);
+        grid-template-rows: auto;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    img {
+        width: 100%;
+    }
+    .bookImg {
+        height: 390px;
+    }
+    .author {
+        color: rgb(104, 126, 199);
+    }
+    .title {
+        font-weight: bold;
+    }
+    .loader {
+        height: 100%;
+        display: flex;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+    }
+    .horizLineRight {
+        border-left: 6px solid green;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        top: 0;
+    }
+    .horizLineLeft {
+        border-right: 6px solid green;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        top: 0;
+    }
+    .listTitles {
+        font-weight: bold;
+        text-align: center;
+    }
+}
